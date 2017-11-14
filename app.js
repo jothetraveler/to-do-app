@@ -24,9 +24,12 @@ function onReady(){
   removal.preventDefault();
   let selected = document.querySelectorAll('#toDoList li input:checked');
     for(var i = 0; i < selected.length; i++){
+<<<<<<< HEAD
       // input:checked's parent's parent aka the grandparent; requesting grandparent to
       // removeChild(input:checked's parent); selected[i] identifies a specfic element in the collection
       // of checkboxes
+=======
+>>>>>>> 68c2ac58d8d1646267e35c9ff06d78118bcb020d
      selected[i].parentNode.parentNode.removeChild(selected[i].parentNode);
     }
   });

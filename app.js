@@ -51,11 +51,23 @@ function renderTheUI() {
 
 
 
+
 }
 
   addToDoForm.addEventListener('submit', event => {
     event.preventDefault();
     creatNewToDo();
+
+  deleteToDo.addEventListener('click', removal => {
+  removal.preventDefault();
+  let selected = document.querySelectorAll('#toDoList li input:checked');
+    for(var i = 0; i < selected.length; i++){
+      // input:checked's parent's parent aka the grandparent; requesting grandparent to
+      // removeChild(input:checked's parent); selected[i] identifies a specfic element in the collection
+      // of checkboxes
+     selected[i].parentNode.parentNode.removeChild(selected[i].parentNode);
+    }
+
   });
 
 renderTheUI();
